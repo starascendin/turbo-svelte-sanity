@@ -1,0 +1,38 @@
+{
+  "name": "@tss/cms",
+  "private": true,
+  "version": "0.0.0",
+  "main": "package.json",
+  "license": "ISC",
+  "scripts": {
+    "dev": "sanity start",
+    "build": "sanity build"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^2.30.1",
+    "@sanity/core": "^2.30.1",
+    "@sanity/default-layout": "^2.30.1",
+    "@sanity/default-login": "^2.30.1",
+    "@sanity/desk-tool": "^2.30.1",
+    "@sanity/eslint-config-studio": "^2.0.0",
+    "@sanity/form-builder": "^2.30.1",
+    "@sanity/vision": "^2.30.1",
+    "prop-types": "^15.7",
+    "react": "^17.0",
+    "react-dom": "^17.0",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "eslint": ">=7.23.0 <8.0.0 || >=8.0.0-0 <8.0.0 || >=8.0.0 <9.0.0",
+    "next": ">=10.2.0",
+    "typescript": ">=3.3.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.23.0 <8.0.0 || >=8.0.0-0 <8.0.0 || >=8.0.0 <9.0.0",
+    "next": ">=10.2.0",
+    "typescript": ">=3.3.1"
+  }
+}
