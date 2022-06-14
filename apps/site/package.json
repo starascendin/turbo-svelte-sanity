@@ -1,8 +1,8 @@
 {
 	"name": "@tss/site",
 	"version": "0.0.0",
-  "private": true,
-  "license": "ISC",
+	"private": true,
+	"license": "ISC",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -15,6 +15,7 @@
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
+		"@sanity/client": "^3.3.2",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
 		"@typescript-eslint/eslint-plugin": "^5.27.0",

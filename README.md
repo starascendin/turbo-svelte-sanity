@@ -39,3 +39,17 @@ because it uses another package manager internally
 Instead you should add the missing package with pnpm like so:
 
 `pnpm add --filter @tss/cms *package*`
+
+## Accessing data troubleshoot
+
+To allow your client app to fetch data from your CMS, you must add the URL of the site to `CORS origins` at [sanity.io](https://www.sanity.io/)
+
+Follow these steps to resolve CORS errors:
+
+1. Select your project in the [Sanity Manager](https://www.sanity.io/manage)
+1. Select the `API` tab
+1. Scroll to `CORS origins` and click `Add CORS origin`
+1. Paste in `http://localhost:3000` in the Origin field
+1. Click `Save`
+
+> Don't forget to add all URLs that your app can be accessed from
