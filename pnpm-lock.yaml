@@ -32,7 +32,6 @@ importers:
       typescript: '>=3.3.1'
     dependencies:
       '@sanity/base': 2.30.1_e2j7mneen3arr2g7olztmnnfl4
-      '@sanity/cli': 2.30.2
       '@sanity/core': 2.30.1_uttaa7wgcixp56c4szhjqfp55y
       '@sanity/default-layout': 2.30.1_k5xntogq5f457hjs5vpiedywpa
       '@sanity/default-login': 2.30.1_lbqx3ukgd3hiafhzrhq26jk3ya
@@ -45,6 +44,7 @@ importers:
       react-dom: 17.0.2_react@17.0.2
       styled-components: 5.3.5_fane7jikarojcev26y27hpbhu4
     devDependencies:
+      '@sanity/cli': 2.30.2
       eslint: 8.17.0
       next: 12.1.6_noz7egsnsfdcs6s6px6pthieke
       typescript: 4.7.3
@@ -1831,7 +1831,7 @@ packages:
     resolution: {integrity: sha512-kS6xH38TWCH0yDpzhURghsacxjUcoDYN/R8xSutEkY70FvYm0x7/bfRuOiFYfdR4wrSE9LAu+50NsCmD3L39Ww==}
     engines: {node: '>=12.0.0'}
     hasBin: true
-    dev: false
+    dev: true
 
   /@sanity/client/3.3.2:
     resolution: {integrity: sha512-M89v/KcNob0tnoMCW2caSnwYhSSqO1j5XuDXCloe966ZRFUAZWe9EVyyvvP7x1vPff5xR9PKxidrcx95l221mg==}
