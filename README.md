@@ -14,7 +14,7 @@ Starter kit for a nice [JAM stack](https://jamstack.org/) experience
 1. `git clone https://github.com/n00pper/turbo-svelte-sanity.git`
 1. `cd turbo-svelte-sanity`
 1. `pnpm install`
-1. Find the `apps/cms/sanity.json` file and replace the `prjocetId` with the ID of your newly created project - the placeholder is `<YOUR PROJECT ID>`
+1. Find the `apps/cms/sanity.json` file and replace the `projectId` with the ID of your newly created project - the placeholder is `<YOUR PROJECT ID>`
 1. `pnpm dev`
 
 > An example of the modified `sanity.json` file would look like this:
