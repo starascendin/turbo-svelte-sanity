@@ -44,6 +44,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sanity/client": "^6.1.2",
 		"@supabase/auth-helpers-sveltekit": "^0.9.4",
 		"@supabase/supabase-js": "^2.21.0",
 		"chart.js": "^4.3.0",
