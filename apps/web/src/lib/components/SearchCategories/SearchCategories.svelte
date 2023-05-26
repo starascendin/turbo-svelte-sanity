@@ -26,15 +26,6 @@
 			filteredBlogs = blogs;
 		}
 	}
-
-	// $: {
-	// 	if (selectedCategories.length > 0) {
-	// 		filteredBlogs = blogs.filter((blog) => selectedCategories.includes(blog.category));
-	// 	} else {
-	// 		filteredBlogs = blogs;
-	// 	}
-	// 	console.log('#filteredBlogs', filteredBlogs);
-	// }
 </script>
 
 <div class="container">
