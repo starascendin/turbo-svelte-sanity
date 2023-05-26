@@ -11,7 +11,7 @@
 	import { toast } from '$lib/components/Toast';
 	/** @type {import('./$types').PageData} */
 	export let data;
-	console.log("#data in frontend", data)
+	// console.log("#data in frontend", data)
 	const action = () => {
 		toast.push('TOAST! i think this is notification', { classes: ['alert-success'] });
 	};

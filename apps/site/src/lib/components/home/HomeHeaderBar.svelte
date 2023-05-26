@@ -13,7 +13,7 @@
 	</div>
 
 	<!-- USER -->
-	{#if $page.data.session.user}
+	{#if $page?.data?.session.user}
 		<div class="px-5">
 			<!-- <div class={role === 'admin' ? 'text-accent' : ''}> -->
 			<div>
@@ -58,21 +58,4 @@
 		</div>
 	</div>
 
-	<div class="flex-none">
-		<div class="dropdown dropdown-end">
-			<!-- svelte-ignore a11y-label-has-associated-control -->
-			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-			<label tabindex="0" class="btn btn-ghost btn-circle">
-				<div class="indicator">
-					<InstagramIcon />
-				</div>
-			</label>
-			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-			<div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
-				<div class="card-body">
-					<span class="font-bold text-lg">instagram</span>
-				</div>
-			</div>
-		</div>
-	</div>
 </div>
