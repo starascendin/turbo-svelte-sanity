@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "cms"
-  },
   "api": {
     "projectId": "9s9ectym",
     "dataset": "production"
+  },
+  "project": {
+    "name": "cms"
   },
   "plugins": [
     "@sanity/base",
