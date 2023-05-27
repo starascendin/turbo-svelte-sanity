@@ -14,6 +14,7 @@
 	import { ArrowSmallRight, VideoCamera, Newspaper, Home } from 'svelte-heros';
 	import { SearchCategories } from '$lib/components/SearchCategories';
 	import { Blog } from '$lib/components/Blog';
+	import { posts } from '$lib/stores.js';
 
 	const breadcrumb_title = 'Blog Sections';
 	const title = 'Blog';
@@ -64,6 +65,9 @@
 			filteredBlogs = blogs;
 		}
 	}
+	export let data;
+	console.log('#data', data);
+	$posts = data.posts;
 </script>
 
 <ExampleDiv>

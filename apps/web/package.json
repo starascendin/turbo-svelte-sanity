@@ -20,6 +20,9 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
+		"@portabletext/svelte": "^2.0.0",
+		"@portabletext/types": "^2.0.2",
+		"@sanity/types": "^3.7.1",		
 		"@playwright/test": "^1.30.0",
 		"@sveltejs/adapter-auto": "2.0.0",
 		"@sveltejs/kit": "1.7.2",
@@ -63,6 +66,8 @@
 	"dependencies": {
 		"@popperjs/core": "^2.11.7",
 		"@sanity/client": "^6.1.2",
+		"@sanity/image-url": "^1.0.2",
+		"groq": "^3.8.1",
 		"classnames": "^2.3.2"
 	}
 }
