@@ -12,7 +12,13 @@ const client = createClient({
 export const load: PageLoad = async (event) => {
 	// const data = await client.fetch(`*[_type == "pet"]`);
 	// console.log("#data ",data);
-	const posts = await client.fetch('*[_type == "post"]')
+	const posts = await client.fetch(`
+	*[_type == "post"]{
+		...,
+		"author": author->name,
+		"categories": categories[]->title,
+	}
+	`)
 	// console.log("#posts ",posts);
 	return {
 		posts,
