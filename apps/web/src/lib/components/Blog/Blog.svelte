@@ -22,10 +22,12 @@
 
 	let protocol = '';
 	let host = '';
+	let postLink = '';
 
 	onMount(() => {
 		protocol = window.location.protocol;
 		host = window.location.host;
+		postLink = `http://${host}/tools/${blog.slug.current}`;
 	});
 
 	export let blog: any;
@@ -45,14 +47,16 @@
 		</div>
 		<span class="text-sm"> {dayjs().to(dayjs(blog._createdAt))}</span>
 	</ArticleHead>
-	<ArticleBody>
-		<svelte:fragment slot="h2"><a href="/">{blog.title}</a></svelte:fragment>
-		<svelte:fragment slot="paragraph">
-			<p class="mb-5 font-light text-gray-500 dark:text-gray-400">
-				{blog.excerpt}
-			</p>
-		</svelte:fragment>
-	</ArticleBody>
+	<a href={postLink}>
+		<ArticleBody>
+			<svelte:fragment slot="h2">{blog.title}</svelte:fragment>
+			<svelte:fragment slot="paragraph">
+				<p class="mb-5 font-light text-gray-500 dark:text-gray-400">
+					{blog.excerpt}
+				</p>
+			</svelte:fragment>
+		</ArticleBody>
+	</a>
 	<ArticleAuthor>
 		<svelte:fragment slot="author">
 			<img
@@ -63,7 +67,7 @@
 			<span class="font-medium dark:text-white"> {blog.author} </span>
 		</svelte:fragment>
 		<a
-			href={`http://${host}/tools/${blog.slug.current}`}
+			href={postLink}
 			class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
 		>
 			What's inside?

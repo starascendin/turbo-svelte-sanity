@@ -49,27 +49,16 @@ URL: https://flowbite.com/docs/components/typography/
 					{data.title}
 				</h1>
 			</header>
-			<section class="post">
-				{#if data.mainImage}
-					<img
-						class="post__cover"
-						src={urlFor(data.mainImage).url()}
-						alt="Cover image for {data.title}"
-					/>
-				{:else}
-					<div class="post__cover--none" />
-				{/if}
-				<div class="post__container">
-					<h1 class="post__title">{data.title}</h1>
-					<p class="post__excerpt">{data.excerpt}</p>
-					<p class="post__date">
-						{formatDate(data._createdAt)}
-					</p>
-					<div class="post__content">
-						<PortableText value={data.body} />
-					</div>
-				</div>
-			</section>
 		</article>
 	</div>
+	<section class="grid grid-cols-2 mx-24 space-x-20">
+		<div>
+			{#if data.mainImage}
+				<img class="post__cover" src={urlFor(data.mainImage).url()} alt="" />
+			{/if}
+		</div>
+		<div class="post__content">
+			<PortableText value={data.body} />
+		</div>
+	</section>
 </main>
