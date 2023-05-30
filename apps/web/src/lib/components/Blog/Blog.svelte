@@ -18,10 +18,15 @@
 
 	dayjs.extend(utc);
 	dayjs.extend(relativeTime);
+	import { onMount } from 'svelte';
 
-	let daysFromNow = dayjs().fromNow();
-	console.log('#daysFromNow', daysFromNow);
-	// let diff = now.from(past);
+	let protocol = '';
+	let host = '';
+
+	onMount(() => {
+		protocol = window.location.protocol;
+		host = window.location.host;
+	});
 
 	export let blog: any;
 </script>
@@ -38,7 +43,7 @@
 				</span>
 			{/each}
 		</div>
-		<span class="text-sm">{daysFromNow} 14 days ago {blog._createdAt}</span>
+		<span class="text-sm"> {dayjs().to(dayjs(blog._createdAt))}</span>
 	</ArticleHead>
 	<ArticleBody>
 		<svelte:fragment slot="h2"><a href="/">{blog.title}</a></svelte:fragment>
@@ -58,10 +63,10 @@
 			<span class="font-medium dark:text-white"> {blog.author} </span>
 		</svelte:fragment>
 		<a
-			href="/"
+			href={`http://${host}/tools/${blog.slug.current}`}
 			class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
 		>
-			Read more
+			What's inside?
 			<ArrowSmallRight class="ml-2" />
 		</a>
 	</ArticleAuthor>
