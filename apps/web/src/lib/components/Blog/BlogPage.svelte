@@ -9,6 +9,7 @@ URL: https://flowbite.com/docs/components/typography/
 	import { formatDate } from '$lib/utils';
 	import { urlFor } from '$lib/utils/image';
 	import dayjs from 'dayjs';
+	import { Image } from '$lib/components/SanityImage';
 
 	import type { PageData } from './$types';
 	export let data: PageData;
@@ -56,7 +57,14 @@ URL: https://flowbite.com/docs/components/typography/
 			{/if}
 		</div>
 		<div class="prose lg:prose-xl post__content">
-			<PortableText value={data.body} />
+			<PortableText
+				value={data.body}
+				components={{
+					types: {
+						image: Image
+					}
+				}}
+			/>
 			<div>
 				{#each data.categories as category (category)}
 					<span
