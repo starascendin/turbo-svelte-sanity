@@ -19,7 +19,7 @@ URL: https://flowbite.com/docs/components/typography/
 <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900">
 	<div class="flex justify-between px-4 mx-auto max-w-screen-xl">
 		<article
-			class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert"
+			class="prose lg:prose-xl mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert"
 		>
 			<header class="mb-4 lg:mb-6 not-format">
 				<address class="flex items-center mb-6 not-italic">
@@ -43,15 +43,13 @@ URL: https://flowbite.com/docs/components/typography/
 						</div>
 					</div>
 				</address>
-				<h1
-					class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white"
-				>
+				<h1>
 					{data.title}
 				</h1>
 			</header>
 		</article>
 	</div>
-	<section class="grid grid-cols-2 mx-10 space-x-10">
+	<section class="md:flex xs:flex-col justify-around mx-8 spacing-x-8">
 		<div>
 			{#if data.mainImage}
 				<img class="post__cover" src={urlFor(data.mainImage).url()} alt="" />
