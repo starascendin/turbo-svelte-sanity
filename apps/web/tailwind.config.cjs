@@ -50,7 +50,15 @@ const config = {
 	  },
 	
 
-	plugins: [require('flowbite/plugin')],
+	// plugins: [require('flowbite/plugin')],
+	plugins: [
+		require("@tailwindcss/typography"), 
+		require('flowbite/plugin'),  
+		// require("daisyui") 
+	],
+	// daisyui: {
+	// 	themes: ['light', 'dark', 'black', 'cupcake']
+	// },
 	darkMode: 'class'
 };
 

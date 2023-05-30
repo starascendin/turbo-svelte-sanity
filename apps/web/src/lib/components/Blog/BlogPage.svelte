@@ -8,7 +8,6 @@ URL: https://flowbite.com/docs/components/typography/
 	import { PortableText } from '@portabletext/svelte';
 	import { formatDate } from '$lib/utils';
 	import { urlFor } from '$lib/utils/image';
-	import { CustomHeader } from '$lib/portabletext';
 	import dayjs from 'dayjs';
 
 	import type { PageData } from './$types';
@@ -58,16 +57,8 @@ URL: https://flowbite.com/docs/components/typography/
 				<img class="post__cover" src={urlFor(data.mainImage).url()} alt="" />
 			{/if}
 		</div>
-		<div class="post__content">
-			<PortableText
-				value={data.body}
-				components={{
-					block: {
-						h1: CustomHeader,
-						h2: CustomHeader
-					}
-				}}
-			/>
+		<div class="prose lg:prose-xl post__content">
+			<PortableText value={data.body} />
 			<div>
 				{#each data.categories as category (category)}
 					<span
