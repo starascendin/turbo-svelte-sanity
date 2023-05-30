@@ -147,6 +147,7 @@ importers:
       '@typescript-eslint/parser': ^5.52.0
       autoprefixer: ^10.4.13
       classnames: ^2.3.2
+      dayjs: ^1.11.7
       eslint: ^8.34.0
       eslint-config-prettier: ^8.6.0
       eslint-plugin-svelte3: ^4.0.0
@@ -170,6 +171,7 @@ importers:
       '@sanity/client': 6.1.2
       '@sanity/image-url': 1.0.2
       classnames: 2.3.2
+      dayjs: 1.11.7
       groq: 3.11.3
     devDependencies:
       '@playwright/test': 1.34.3
@@ -5595,7 +5597,6 @@ packages:
 
   /dayjs/1.11.7:
     resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
-    dev: true
 
   /debounce/1.0.0:
     resolution: {integrity: sha512-4FCfBL8uZFIh3BShn4AlxH4O9F5v+CVriJfiwW8Me/MhO7NqBE5JO5WO48NasbsY9Lww/KYflB79MejA3eKhxw==}

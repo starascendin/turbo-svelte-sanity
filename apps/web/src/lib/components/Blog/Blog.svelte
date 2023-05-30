@@ -12,6 +12,16 @@
 	} from 'flowbite-svelte-blocks';
 	import { ArrowSmallRight, VideoCamera, Newspaper, Home } from 'svelte-heros';
 	import { PortableText } from '@portabletext/svelte';
+	import dayjs from 'dayjs';
+	import utc from 'dayjs/plugin/utc';
+	import relativeTime from 'dayjs/plugin/relativeTime';
+
+	dayjs.extend(utc);
+	dayjs.extend(relativeTime);
+
+	let daysFromNow = dayjs().fromNow();
+	console.log('#daysFromNow', daysFromNow);
+	// let diff = now.from(past);
 
 	export let blog: any;
 </script>
@@ -28,7 +38,7 @@
 				</span>
 			{/each}
 		</div>
-		<span class="text-sm">14 days ago</span>
+		<span class="text-sm">{daysFromNow} 14 days ago {blog._createdAt}</span>
 	</ArticleHead>
 	<ArticleBody>
 		<svelte:fragment slot="h2"><a href="/">{blog.title}</a></svelte:fragment>

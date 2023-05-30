@@ -16,33 +16,8 @@
 
 	// TODO: These needs to be replaced w/ posts from sanity
 	export let data;
-	console.log('#data', data);
-	// let blogs = data.posts;
 
-	let blogs = [
-		{
-			title: 'title 1',
-			name: 'Blog 1',
-			author: 'Bryan Liu',
-			categories: ['Tech', 'Food', 'Travel', 'Hotel'],
-			body: 'Tech blog body...'
-		},
-		{
-			title: 'title 2',
-			name: 'Blog 2',
-			author: 'Bryan Liu',
-			categories: ['Lifestyle', 'Travel2'],
-			body: 'Lifestyle blog body...'
-		},
-		{
-			title: 'title 3',
-			name: 'Blog 3',
-			author: 'Bryan Liu',
-			categories: ['Food', 'Art1'],
-			body: 'Food blog body...'
-		},
-		...data.posts
-	];
+	let blogs = [...data.posts];
 
 	let categories = Array.from(new Set(blogs.map((blog) => blog.categories).flat()));
 	let selectedCategories = new Set();
@@ -86,7 +61,7 @@
 			</svelte:fragment>
 		</BlogHead>
 		<BlogBodyWrapper>
-			{#each filteredBlogs as blog (blog.name)}
+			{#each filteredBlogs as blog (blog._id)}
 				<BlogCard {blog} />
 			{/each}
 		</BlogBodyWrapper>
