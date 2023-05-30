@@ -31,9 +31,10 @@ URL: https://flowbite.com/docs/components/typography/
 							alt="Jese Leos"
 						/> -->
 						<div>
-							<a href="#" rel="author" class="text-xl font-bold text-gray-900 dark:text-white"
+							<!-- <a href="#" rel="author" class="text-xl font-bold text-gray-900 dark:text-white"
 								>{data.author}</a
-							>
+							> -->
+							<span class="text-xl font-bold text-gray-900 dark:text-white">{data.author}</span>
 							<p class="text-base font-light text-gray-500 dark:text-gray-400">
 								<time
 									datetime={dateTimeFormatted}

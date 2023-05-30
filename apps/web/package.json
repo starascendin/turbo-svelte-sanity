@@ -68,6 +68,7 @@
 		"@sanity/block-content-to-markdown": "^0.0.5",
 		"@sanity/client": "^6.1.2",
 		"@sanity/image-url": "^1.0.2",
+		"@tailwindcss/typography": "^0.5.9",
 		"classnames": "^2.3.2",
 		"daisyui": "^2.51.6",
 		"dayjs": "^1.11.7",
