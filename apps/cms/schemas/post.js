@@ -51,7 +51,23 @@ export default {
       name: 'body',
       title: 'Body',
       type: 'blockContent'
+    },
+    {
+      type: "document",
+      name: "content",
+      fields: [
+        {
+          type: "markdown",
+          description: "A Github flavored markdown field with image uploading",
+          name: "content"
+        }
+      ]
+      
     }
+    // {
+    
+    //   type: 'markdown',
+    // },
   ],
 
   preview: {

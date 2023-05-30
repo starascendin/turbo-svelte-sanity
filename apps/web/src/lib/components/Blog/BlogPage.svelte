@@ -8,6 +8,7 @@ URL: https://flowbite.com/docs/components/typography/
 	import { PortableText } from '@portabletext/svelte';
 	import { formatDate } from '$lib/utils';
 	import { urlFor } from '$lib/utils/image';
+	import { CustomHeader } from '$lib/portabletext';
 	import dayjs from 'dayjs';
 
 	import type { PageData } from './$types';
@@ -51,14 +52,32 @@ URL: https://flowbite.com/docs/components/typography/
 			</header>
 		</article>
 	</div>
-	<section class="grid grid-cols-2 mx-24 space-x-20">
+	<section class="grid grid-cols-2 mx-10 space-x-10">
 		<div>
 			{#if data.mainImage}
 				<img class="post__cover" src={urlFor(data.mainImage).url()} alt="" />
 			{/if}
 		</div>
 		<div class="post__content">
-			<PortableText value={data.body} />
+			<PortableText
+				value={data.body}
+				components={{
+					block: {
+						h1: CustomHeader,
+						h2: CustomHeader
+					}
+				}}
+			/>
+			<div>
+				{#each data.categories as category (category)}
+					<span
+						class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800"
+					>
+						<!-- <VideoCamera variation="solid" size="14" /> -->
+						<span class="ml-1">{category}</span>
+					</span>
+				{/each}
+			</div>
 		</div>
 	</section>
 </main>
