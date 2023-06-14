@@ -6,7 +6,6 @@ URL: https://flowbite.com/docs/components/typography/
 
 <script lang="ts">
 	import { PortableText } from '@portabletext/svelte';
-	import { formatDate } from '$lib/utils';
 	import { Section, ContentWithImage, News, HeroHeader, HeroBody } from '$lib';
 	import { ExampleDiv, SectionHeader, SectionBlock } from '../../../routes/utils';
 
