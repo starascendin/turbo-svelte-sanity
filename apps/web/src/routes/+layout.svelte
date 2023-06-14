@@ -2,6 +2,7 @@
 	import '../app.css';
 	import { NavBar } from '$lib/components/NavBar';
 	import { Footer } from '$lib/components/Footer';
+	import { ExampleDiv } from './utils';
 
 	import { DarkMode, Button, Dropdown, DropdownItem, Chevron } from 'flowbite-svelte';
 
@@ -10,5 +11,7 @@
 </script>
 
 <NavBar />
-<slot />
+<ExampleDiv>
+	<slot />
+</ExampleDiv>
 <Footer />
