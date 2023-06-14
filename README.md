@@ -1,3 +1,13 @@
+# BL: Notes to self (in case i forget)
+`pnpm dev` to run all dev
+
+
+
+
+
+
+
+-----
 # Turbo-Svelte-Sanity
 
 Starter kit for a nice [JAM stack](https://jamstack.org/) experience
