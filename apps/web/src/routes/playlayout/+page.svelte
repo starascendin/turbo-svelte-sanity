@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { Button } from 'flowbite-svelte';
-	import { VideoCamera } from 'svelte-heros';
 	import { Section, ContentWithImage } from '$lib';
 	import { ExampleDiv, SectionHeader, SectionBlock } from '../utils';
 
