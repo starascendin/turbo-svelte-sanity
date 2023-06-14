@@ -17,7 +17,7 @@ export const load: PageLoad = async (event) => {
 		...,
 		"author": author->name,
 		"categories": categories[]->title,
-	}
+	} | order(_createdAt desc)
 	`)
 	// console.log("#posts ",posts);
 	return {
