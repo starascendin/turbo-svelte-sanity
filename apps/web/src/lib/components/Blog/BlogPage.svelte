@@ -7,7 +7,7 @@ URL: https://flowbite.com/docs/components/typography/
 <script lang="ts">
 	import { PortableText } from '@portabletext/svelte';
 	import { formatDate } from '$lib/utils';
-	import { Section, News, HeroHeader, HeroBody } from '$lib/blockslib';
+	import { Section, News, HeroHeader, HeroBody } from '$lib';
 
 	import { urlFor } from '$lib/utils/image';
 	import dayjs from 'dayjs';
@@ -18,20 +18,6 @@ URL: https://flowbite.com/docs/components/typography/
 	console.log('#data', data);
 	let dateTimeFormatted = dayjs(data._createdAt).format('YYYY-MM-DD');
 </script>
-
-<Section name="none" classSection="py-6 sm:py-10" classDiv="px-4 mx-auto max-w-8xl">
-	<div class="grid lg:grid-cols-2">
-		<div>
-			<h2 class="mb-1 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
-				Visual image with heading
-			</h2>
-			<p class="text-lg text-gray-500 lg:mb-0 dark:text-gray-400 lg:max-w-2xl">
-				Use this example to show an image next to the heading and CTA buttons to improve the visual
-				impact of the website's first visit.
-			</p>
-		</div>
-	</div>
-</Section>
 
 <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900">
 	<div class="flex justify-between px-4 mx-auto max-w-screen-xl">
